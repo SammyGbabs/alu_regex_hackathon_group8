@@ -24,7 +24,6 @@ submitButton.addEventListener('submit', e => {
         return response.json()
     })
     .then((response) => {
-        console.log('Resp Text', response.text())
         console.log('Resp Body', response.body)
         console.log('Resp Body Data', response.body.data)
     }).catch((error) => {
