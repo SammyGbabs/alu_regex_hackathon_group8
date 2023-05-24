@@ -10,8 +10,19 @@ submitButton.addEventListener('submit', e => {
     const userInput = input.value
     input.value = ''
 
-    console.log(userInput)
+    const url = 'http://127.0.0.1:4000/regex/match/'
 
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text/plain'
+        },
+        body: userInput,
+        // mode: 'no-cors'
 
-    // fetch()
+    }).then((response) => {
+        console.log(response.text())
+    }).catch((error) => {
+        console.log(error);
+    })
 })
