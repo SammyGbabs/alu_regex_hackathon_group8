@@ -21,7 +21,7 @@ submitButton.addEventListener('submit', e => {
         // mode: 'no-cors'
 
     }).then((response) => {
-        console.log(response)
+        console.log(response.body)
     }).catch((error) => {
         console.log(error);
     })
