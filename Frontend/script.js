@@ -21,7 +21,12 @@ submitButton.addEventListener('submit', e => {
         // mode: 'no-cors'
 
     }).then((response) => {
-        console.log(response.body)
+        return response.json()
+    })
+    .then((response) => {
+        console.log('Resp Text', response.text())
+        console.log('Resp Body', response.body)
+        console.log('Resp Body Data', response.body.data)
     }).catch((error) => {
         console.log(error);
     })
