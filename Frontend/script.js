@@ -10,7 +10,7 @@ submitButton.addEventListener('submit', e => {
     const userInput = input.value
     input.value = ''
 
-    const url = 'http://127.0.0.1:4000/regex/match/'
+    const url = 'https://regex-server.onrender.com/regex/match/'
 
     fetch(url, {
         method: 'POST',
@@ -21,7 +21,7 @@ submitButton.addEventListener('submit', e => {
         // mode: 'no-cors'
 
     }).then((response) => {
-        console.log(response.text())
+        console.log(response)
     }).catch((error) => {
         console.log(error);
     })
