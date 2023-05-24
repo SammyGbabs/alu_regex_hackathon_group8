@@ -14,7 +14,7 @@ def match_jokes(input_string, obj):
         all_matches += f'{joke.group(0)}, '
 
     if len(all_matches) == 0:
-        obj['Twitter Username'] = 'No match found!'
+        obj['Jokes'] = 'No match found!'
         return
 
     obj['Jokes'] = all_matches
