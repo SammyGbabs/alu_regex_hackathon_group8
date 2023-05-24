@@ -10,8 +10,7 @@ const appendResult = (message) => {
 }
 
 submitButton.addEventListener('submit', e => {
-    e.preventDefault()
-
+    
     const userInput = input.value
     input.value = ''
 

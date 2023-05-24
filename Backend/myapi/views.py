@@ -3,8 +3,10 @@ from rest_framework.decorators import api_view
 
 from regex_modules.add_tv_episode_title import add_tv_episode_title
 from regex_modules.match_movie_titles import match_movie_titles
+from regex_modules.twitter_handles import match_twitter_username
+from regex_modules.match_jokes import match_jokes
 
-matchers = [add_tv_episode_title, match_movie_titles]
+matchers = [add_tv_episode_title, match_movie_titles, match_twitter_username, match_jokes]
 movie_title = "Today we want to watch Sanctuary (221), Legendary(1234), and Merlin(23)"  # Replace with your actual movie title
 result = {}
 

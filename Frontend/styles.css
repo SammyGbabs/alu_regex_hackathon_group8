@@ -28,3 +28,8 @@ footer ul {
     flex-direction: row;
     justify-content: space-between;
 }
+
+main article form #user-input {
+    height: 150px;
+    width: 300px;
+}
