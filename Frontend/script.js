@@ -6,7 +6,7 @@ const displayContainer = document.getElementById('display-body')
 const appendResult = (message) => {
     const messageElem = document.createElement('ul');
     messageElem.innerHTML = `${message}`
-    messageContainer.append(messageElem)
+    displayContainer.append(messageElem)
 }
 
 console.log('We aare here')
