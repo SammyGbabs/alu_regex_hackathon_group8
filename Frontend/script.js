@@ -9,8 +9,6 @@ const appendResult = (message) => {
     displayContainer.append(messageElem)
 }
 
-console.log('We aare here')
-
 submitButton.addEventListener('submit', e => {
     e.preventDefault()
 
@@ -25,18 +23,14 @@ submitButton.addEventListener('submit', e => {
             'Content-Type': 'text/plain'
         },
         body: userInput,
-        // mode: 'no-cors'
-
     }).then((response) => {
         return response.json()
     })
         .then((response) => {
             const data = response.data
             for (const [key, value] of Object.entries(data)) {
-                console.log(`${key}: ${value}`);
                 appendResult(`${key}: ${value}`)
             }
-            console.log('Resp Data', response.data)
         }).catch((error) => {
             console.log(error);
         })
