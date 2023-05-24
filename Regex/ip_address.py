@@ -1,12 +1,11 @@
 
 import re
 
-ip_address = ['192.168.43.1']    #Replace with your actual IP address
+ip_address = ['192.168.43.1']   
 
-ip_pattern = r"^(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(?:\.(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
-ip address_match = re.match(ip pattern,ip_address)
+ip_pattern = re.compile(r"^(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(?:\.(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$")
 
-if ip_address:
-    print(ip_address.group(0))
-else:
-    print("The IP address does not match the pattern")
+ip_address_match = ip_pattern.findall(ip_address)
+
+for address in ip_address_match:
+    print (address)
